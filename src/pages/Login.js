@@ -32,17 +32,17 @@ const Login = () => {
         credentials: "include",
         body: JSON.stringify(credentials),
       });
-
+    
       if (response.ok) {
         console.log("User authenticated:", credentials);
-        navigate("/reviews");
+        navigate("/reviews") // Redirect to '/reviews'
       } else {
         console.error("Authentication failed");
       }
     } catch (error) {
       console.error("Error:", error);
     }
-
+    
     setUsername("");
     setPassword("");
   };
